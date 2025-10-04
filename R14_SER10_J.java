@@ -22,6 +22,7 @@ class SerializeSensorData {
         // Note that each SensorData object is 1 MB in size
         SensorData sd = SensorData.readSensorData();
         out.writeObject(sd);
+        out.reset(); // Reset the stream
       }
     } finally {
       if (out != null) {
